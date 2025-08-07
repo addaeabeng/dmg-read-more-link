@@ -1,0 +1,16 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "dmg/read-more-link",
+    "title": "Read More Link",
+    "category": "widgets",
+    "icon": "admin-links",
+    "description": "Insert a stylized link to a post.",
+    "attributes": {
+      "postId": { "type": "number" },
+      "postTitle": { "type": "string" },
+      "postUrl": { "type": "string" }
+    },
+    "editorScript": "file:./build/index.js",
+    "style": "file:./style.css"
+}
