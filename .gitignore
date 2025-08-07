@@ -1,2 +1,8 @@
-node_modules
-wp-content/node_modules
+# ignore top-level node modules
+/node_modules/
+
+# ignore node modules under wp-content
+/wp-content/node_modules/
+
+# ignore vendor dirs in each plugin
+/wp-content/plugins/*/vendor/
