@@ -72,7 +72,7 @@ Run the command with no parameters
 
 ## Development
 
-I built the block using the ```@wordpress/scripts``` package. For testing i used Jest and PHPUnit with the WP Test Suite.
+I built the block using the ```@wordpress/scripts``` package. For testing i used Jest and PHPUnit with the WP Test Suite. I developed this plugin in a custom local Docker environment for portability.
 
 ### Performance considerations
 
