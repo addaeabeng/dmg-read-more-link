@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  wordpress:
+    build: .
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wp
+      WORDPRESS_DB_PASSWORD: wp
+      WORDPRESS_DEBUG: 1
+    volumes:
+      - ./wp-content/plugins/dmg-read-more-link:/var/www/html/wp-content/plugins/dmg-read-more-link
+      - ./wp-seed.sh:/usr/local/bin/wp-seed.sh
+      - ./custom-php.ini:/usr/local/etc/php/conf.d/custom-php.ini
+      - ./.htaccess:/var/www/html/.htaccess
+    command: ["/bin/bash", "-c", "/usr/local/bin/wp-seed.sh && exec apache2-foreground"]
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp
+      MYSQL_PASSWORD: wp
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
