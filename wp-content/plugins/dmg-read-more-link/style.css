@@ -1,0 +1,10 @@
+.dmg-read-more {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 1em;
+  }
+  .dmg-read-more a {
+    color: #0073aa;
+    text-decoration: underline;
+  }
+  
