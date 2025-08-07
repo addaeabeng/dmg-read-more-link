@@ -3,7 +3,7 @@
 # Plugin path inside the container
 PLUGIN_PATH=/var/www/html/wp-content/plugins/dmg-read-more-link
 
-.PHONY: up down build seed login php-test js-test build-js clean restart
+.PHONY: up down build seed login php-test js-test build-js clean restart reset
 
 # Start all services in the background
 up:
