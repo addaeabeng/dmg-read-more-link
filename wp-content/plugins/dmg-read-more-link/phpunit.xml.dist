@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="tests/bootstrap.php"
+        colors="true"
+        verbose="true"
+>
+    <testsuites>
+        <testsuite name="Plugin Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="WP_TESTS_DIR" value="/tmp/wordpress-tests-lib" />
+        <env name="WP_ROOT_DIR" value="/var/www/html" />
+        <env name="PLUGIN_DIR" value="/var/www/html/wp-content/plugins/dmg-read-more-link" />
+        <env name="DB_NAME" value="wordpress" />
+        <env name="DB_USER" value="wp" />
+        <env name="DB_PASS" value="wp" />
+        <env name="DB_HOST" value="db" />
+    </php>
+</phpunit>
