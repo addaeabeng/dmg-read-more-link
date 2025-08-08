@@ -109,6 +109,9 @@ Due to time constraints I still consider this plugin to be WIP, but the basic fu
 1. When running the seed script sometimes throws an error when randomly assigning the block to seeded posts. If this happens, then just run ```make down``` then ```make up``` or run ```make seed``` to re run the seeding process.
 2. An error message appears when searching for posts. This does not affect functionality but its something I need to look at.
 
+#### Other improvements
+1. Server rendered block - In production I would lean towards using a server rendered block instead of JS to prevent block validation errors, and make future updates easier.
+
 
 
 
